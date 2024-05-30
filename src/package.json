@@ -1,0 +1,17 @@
+{
+    "name": "react-custom-datepicker",
+    "version": "1.0.0",
+    "description": "A React component for date and time picking",
+    "main": "src/DateTimePicker/DateTimePicker.jsx",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": ["react", "datepicker", "datetimepicker"],
+    "author": "Ambre GONDRY",
+    "license": "ISC",
+    "dependencies": {
+      "react": "^17.0.2",
+      "react-datepicker": "^4.1.1"
+    }
+  }
+  
