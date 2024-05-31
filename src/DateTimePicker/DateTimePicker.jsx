@@ -9,7 +9,7 @@ import './DateTimePicker.css';
  * @param {function} props.onChange - The function to call when the date changes
  * @param {string} props.id - The id for the date picker
  * @param {boolean} [props.showTimeSelect=true] - Whether to show time selection
- * @param {string} [props.dateFormat="MMMM d, yyyy h:mm aa"] - The format of the date
+ * @param {string} [props.dateFormat="yyyy-MM-dd'T'HH:mm"] - The format of the date
  */
 const DateTimePicker = ({ label, selected, onChange, id, showTimeSelect = true, dateFormat = "yyyy-MM-dd'T'HH:mm" }) => {
   const [date, setDate] = useState(selected);

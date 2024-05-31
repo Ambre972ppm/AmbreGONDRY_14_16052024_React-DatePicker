@@ -2,14 +2,11 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  mode: 'development',
-  entry: './src/index.js',
+  mode: 'development', 
+  entry: './playground/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
-    library: 'reactCustomDatepicker',
-    libraryTarget: 'umd',
-    umdNamedDefine: true,
   },
   module: {
     rules: [
@@ -18,6 +15,9 @@ module.exports = {
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env', '@babel/preset-react']
+          }
         },
       },
       {
@@ -43,7 +43,7 @@ module.exports = {
     open: true,
   },
   performance: {
-    maxAssetSize: 512000,
-    maxEntrypointSize: 512000,
+    maxAssetSize: 512000, // Limite à 500 KB
+    maxEntrypointSize: 512000, // Limite à 500 KB
   },
 };
