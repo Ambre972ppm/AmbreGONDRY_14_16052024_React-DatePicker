@@ -13,7 +13,7 @@
     "datepicker",
     "datetimepicker"
   ],
-  "author": "Votre Nom",
+  "author": "Ambre GONDRY",
   "license": "ISC",
   "dependencies": {
     "react": "^17.0.2",
