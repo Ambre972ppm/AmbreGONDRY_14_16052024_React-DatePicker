@@ -1,4 +1,3 @@
-# React DateTimePicker Demo and Documentation
 
 ## Installation
 
