@@ -1,58 +1,150 @@
-# React Custom DatePicker
+React DateTimePicker
+Demo and Documentation
 
-## Description
-A React component for date and time picking, inspired by a jQuery datepicker plugin.
 
-## Installation
+Installation
+To install the component, use npm:
 
-1. Clone the repository:
-    ```sh
-    git clone https://github.com/Ambre972ppm/react-custom-datepickerspo
-    ```
+sh
+Copier le code
+npm install react-custom-datepicker
+OR
 
-2. Navigate to the project directory:
-    ```sh
-    cd react-custom-datepicker
-    ```
+sh
+Copier le code
+yarn add react-custom-datepicker
+or download the zip.
 
-3. Install the dependencies:
-    ```sh
-    npm install
-    ```
+Usage
+Basic Example
+Import the DateTimePicker component and its styles into your React application:
 
-## Usage
+jsx
+Copier le code
+import React, { useState } from 'react';
+import DateTimePicker from 'react-custom-datepicker';
+import 'react-custom-datepicker/dist/DateTimePicker.css';
 
-To use the `DateTimePicker` component in your project, follow these steps:
+const App = () => {
+  const [selectedDate, setSelectedDate] = useState(null);
 
-1. Import the `DateTimePicker` component and its CSS:
-    ```jsx
-    import React, { useState } from 'react';
-    import DateTimePicker from './src/DateTimePicker/DateTimePicker';
-    import './src/DateTimePicker/DateTimePicker.css';
-    ```
+  return (
+    <div>
+      <h1>DateTimePicker Demo</h1>
+      <DateTimePicker
+        label="Select Date and Time"
+        selected={selectedDate}
+        onChange={setSelectedDate}
+      />
+      {selectedDate && <p>Selected Date: {selectedDate.toString()}</p>}
+    </div>
+  );
+};
 
-2. Use the component in your React application:
-    ```jsx
-    const App = () => {
-      const [selectedDate, setSelectedDate] = useState(null);
+export default App;
+Options
+You can customize the component with the following properties:
 
-      return (
-        <div>
-          <h1>DateTimePicker Demo</h1>
-          <DateTimePicker
-            label="Select Date and Time"
-            selected={selectedDate}
-            onChange={setSelectedDate}
-          />
-        </div>
-      );
-    };
+label (string): The label for the date picker.
+selected (Date): The selected date.
+onChange (function): The function to call when the date changes.
+id (string): The id for the date picker.
+showTimeSelect (boolean, default: true): Whether to show time selection.
+dateFormat (string, default: "MMMM d, yyyy h:mm aa"): The format of the date.
+Examples
+DateTimePicker
+jsx
+Copier le code
+<DateTimePicker
+  label="Select Date and Time"
+  selected={selectedDate}
+  onChange={setSelectedDate}
+/>
 
-    export default App;
-    ```
+DatePicker
+jsx
+Copier le code
+<DateTimePicker
+  label="Select a Date"
+  selected={selectedDate}
+  onChange={setSelectedDate}
+  showTimeSelect={false}
+/>
 
-## Documentation
+TimePicker
+jsx
+Copier le code
+<DateTimePicker
+  label="Select a Time"
+  selected={selectedTime}
+  onChange={setSelectedTime}
+  dateFormat="h:mm aa"
+  showTimeSelect
+  showTimeSelectOnly
+/>
 
-To generate the documentation, run:
-```sh
-npm run doc
+Options to Highlight Specific Dates or Periods
+You can use the highlightDates prop to highlight specific dates:
+
+jsx
+Copier le code
+<DateTimePicker
+  label="Special Dates"
+  selected={selectedDate}
+  onChange={setSelectedDate}
+  highlightDates={[
+    { "react-datepicker__day--highlighted": [new Date('2023-12-25'), new Date('2024-01-01')] }
+  ]}
+/>
+
+JS Build Help
+Requirements
+This project requires Node.js and npm. Download and install Node.js.
+
+Installing Dependencies
+Install npm dependencies:
+sh
+Copier le code
+npm install
+Building
+To build the production files:
+
+sh
+Copier le code
+npm run build
+Generated Files Structure
+When the build is complete, you will have the following files:
+
+dist/react-custom-datepicker.js - browser file
+dist/react-custom-datepicker.min.js - minified browser file
+dist/react-custom-datepicker.css - styles file
+Contribution
+Contributions are welcome! Please submit pull requests or open issues on GitHub.
+
+License
+This project is licensed under the ISC License.
+
+Conversion Explanation
+The conversion from the jQuery plugin to a React component involved the following steps:
+
+Replacing jQuery APIs with React APIs:
+
+Using React hooks (useState, useEffect) to manage state and side effects.
+Utilizing react-datepicker to provide the date and time picking functionality, replacing the original jQuery plugin.
+Component Structure:
+
+The DateTimePicker component encapsulates the date and time picking logic.
+Props are used to customize the component's behavior (e.g., showing or hiding the time selection).
+Styles:
+
+CSS styles were adapted to match the desired appearance of the component.
+Using CSS classes to style the date and time picker.
+Development Environment Configuration:
+
+Using Webpack to bundle the JavaScript and CSS files.
+Using Babel to transpile JSX and ES6 code to browser-compatible JavaScript.
+Documentation:
+
+Using JSDoc to generate detailed documentation of the component's properties and usage.
+Creating a comprehensive README to guide users on installation, usage, and contribution to the project.
+This conversion allows the date and time picker to be used effectively in React applications, leveraging React's modern features and syntax.
