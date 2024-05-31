@@ -1,8 +1,8 @@
 {
-  "name": "react-custom-datepicker",
+  "name": "@ambre972ppm/react-custom-datepicker",
   "version": "1.0.0",
   "description": "A React component for date and time picking",
-  "main": "playground/index.js",
+  "main": "dist/react-custom-datepicker.js",
   "scripts": {
     "start": "webpack serve --open",
     "build": "webpack",
@@ -13,7 +13,7 @@
     "datepicker",
     "datetimepicker"
   ],
-  "author": "",
+  "author": "Votre Nom",
   "license": "ISC",
   "dependencies": {
     "react": "^17.0.2",
