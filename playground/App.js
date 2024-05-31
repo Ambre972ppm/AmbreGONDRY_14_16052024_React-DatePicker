@@ -13,6 +13,7 @@ const App = () => {
         selected={selectedDate}
         onChange={setSelectedDate}
       />
+      {selectedDate && <p>Selected Date: {selectedDate.toString()}</p>}
     </div>
   );
 };

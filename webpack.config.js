@@ -2,7 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  mode: 'development', // Ajoutez cette ligne
+  mode: 'development',
   entry: './playground/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -40,7 +40,7 @@ module.exports = {
     open: true,
   },
   performance: {
-    maxAssetSize: 512000, // Limite à 500 KB
-    maxEntrypointSize: 512000, // Limite à 500 KB
+    maxAssetSize: 512000,
+    maxEntrypointSize: 512000,
   },
 };

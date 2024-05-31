@@ -17,17 +17,13 @@
   "license": "ISC",
   "dependencies": {
     "react": "^17.0.2",
-    "react-datepicker": "^4.1.1",
-    "react-dom": "^17.0.2",
-    "react-onclickoutside": "^6.13.1",
-    "react-popper": "^2.2.3"
+    "react-dom": "^17.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.12.3",
     "@babel/preset-env": "^7.12.1",
     "@babel/preset-react": "^7.12.5",
     "babel-loader": "^8.1.0",
-    "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
     "css-loader": "^6.3.0",
     "html-webpack-plugin": "^5.3.2",
     "jsdoc": "^3.6.11",

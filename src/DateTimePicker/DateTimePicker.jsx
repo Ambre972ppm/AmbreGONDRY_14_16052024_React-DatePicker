@@ -1,6 +1,4 @@
-import React from 'react';
-import ReactDatePicker from 'react-datepicker';
-import 'react-datepicker/dist/react-datepicker.css';
+import React, { useState, useEffect } from 'react';
 import './DateTimePicker.css';
 
 /**
@@ -13,16 +11,27 @@ import './DateTimePicker.css';
  * @param {boolean} [props.showTimeSelect=true] - Whether to show time selection
  * @param {string} [props.dateFormat="MMMM d, yyyy h:mm aa"] - The format of the date
  */
-const DateTimePicker = ({ label, selected, onChange, id, showTimeSelect = true, dateFormat = "MMMM d, yyyy h:mm aa" }) => {
+const DateTimePicker = ({ label, selected, onChange, id, showTimeSelect = true, dateFormat = "yyyy-MM-dd'T'HH:mm" }) => {
+  const [date, setDate] = useState(selected);
+
+  useEffect(() => {
+    setDate(selected);
+  }, [selected]);
+
+  const handleChange = (event) => {
+    const newDate = new Date(event.target.value);
+    setDate(newDate);
+    onChange(newDate);
+  };
+
   return (
     <div className="datetime-picker">
       <label htmlFor={id}>{label}</label>
-      <ReactDatePicker
-        selected={selected}
-        onChange={onChange}
-        showTimeSelect={showTimeSelect}
-        dateFormat={dateFormat}
+      <input
+        type="datetime-local"
         id={id}
+        value={date ? date.toISOString().slice(0, 16) : ''}
+        onChange={handleChange}
         className="form-control"
       />
     </div>
