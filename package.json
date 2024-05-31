@@ -1,8 +1,13 @@
 {
   "name": "@ambre972ppm/react-custom-datepicker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A React component for date and time picking",
-  "main": "dist/react-custom-datepicker.js",
+  "main": "dist/bundle.js",
+  "files": [
+    "dist",
+    "src/DateTimePicker/DateTimePicker.css",
+    "README.md"
+  ],
   "scripts": {
     "start": "webpack serve --open",
     "build": "webpack",
