@@ -1,19 +1,17 @@
-React DateTimePicker
-Demo and Documentation
+# React DateTimePicker Demo and Documentation
 
+## Installation
 
-Installation
 To install the component, use npm:
 
-sh
-Copier le code
+```sh
 npm install react-custom-datepicker
 OR
 
 sh
 Copier le code
 yarn add react-custom-datepicker
-or download the zip.
+Or download the zip file.
 
 Usage
 Basic Example
@@ -50,39 +48,27 @@ selected (Date): The selected date.
 onChange (function): The function to call when the date changes.
 id (string): The id for the date picker.
 showTimeSelect (boolean, default: true): Whether to show time selection.
-dateFormat (string, default: "MMMM d, yyyy h:mm aa"): The format of the date.
+dateFormat (string, default: "MMMM d, yyyy h
+aa"): The format of the date.
 Examples
-DateTimePicker
-jsx
-Copier le code
-<DateTimePicker
-  label="Select Date and Time"
-  selected={selectedDate}
-  onChange={setSelectedDate}
-/>
-
 DatePicker
 jsx
 Copier le code
 <DateTimePicker
-  label="Select a Date"
+  label="Date Picker"
   selected={selectedDate}
   onChange={setSelectedDate}
-  showTimeSelect={false}
 />
-
 TimePicker
 jsx
 Copier le code
 <DateTimePicker
-  label="Select a Time"
-  selected={selectedTime}
-  onChange={setSelectedTime}
-  dateFormat="h:mm aa"
+  label="Time Picker"
+  selected={selectedDate}
+  onChange={setSelectedDate}
   showTimeSelect
-  showTimeSelectOnly
+  dateFormat="h:mm aa"
 />
-
 Options to Highlight Specific Dates or Periods
 You can use the highlightDates prop to highlight specific dates:
 
@@ -93,16 +79,16 @@ Copier le code
   selected={selectedDate}
   onChange={setSelectedDate}
   highlightDates={[
-    { "react-datepicker__day--highlighted": [new Date('2023-12-25'), new Date('2024-01-01')] }
+    { "react-datepicker__day--highlighted": [new Date("2023-12-25"), new Date("2024-01-01")] },
   ]}
 />
-
 JS Build Help
 Requirements
 This project requires Node.js and npm. Download and install Node.js.
 
 Installing Dependencies
 Install npm dependencies:
+
 sh
 Copier le code
 npm install
@@ -127,24 +113,17 @@ This project is licensed under the ISC License.
 Conversion Explanation
 The conversion from the jQuery plugin to a React component involved the following steps:
 
-Replacing jQuery APIs with React APIs:
+Replacing jQuery APIs with React APIs
+Using React hooks (useState, useEffect) to manage state and side effects. Utilizing react-datepicker to provide the date and time picking functionality, replacing the original jQuery plugin.
 
-Using React hooks (useState, useEffect) to manage state and side effects.
-Utilizing react-datepicker to provide the date and time picking functionality, replacing the original jQuery plugin.
-Component Structure:
+Component Structure
+The DateTimePicker component encapsulates the date and time picking logic. Props are used to customize the component's behavior (e.g., showing or hiding the time selection).
 
-The DateTimePicker component encapsulates the date and time picking logic.
-Props are used to customize the component's behavior (e.g., showing or hiding the time selection).
-Styles:
+Styles
+CSS styles were adapted to match the desired appearance of the component. Using CSS classes to style the date and time picker.
 
-CSS styles were adapted to match the desired appearance of the component.
-Using CSS classes to style the date and time picker.
-Development Environment Configuration:
+Development Environment Configuration
+Using Webpack to bundle the JavaScript and CSS files. Using Babel to transpile JSX and ES6 code to browser-compatible JavaScript.
 
-Using Webpack to bundle the JavaScript and CSS files.
-Using Babel to transpile JSX and ES6 code to browser-compatible JavaScript.
-Documentation:
-
-Using JSDoc to generate detailed documentation of the component's properties and usage.
-Creating a comprehensive README to guide users on installation, usage, and contribution to the project.
-This conversion allows the date and time picker to be used effectively in React applications, leveraging React's modern features and syntax.
+Documentation
+Using JSDoc to generate detailed documentation of the component's properties and usage. Creating a comprehensive README to guide users on installation, usage, and contribution to the project. This conversion allows the date and time picker to be used effectively in React applications, leveraging React's modern features and syntax.
