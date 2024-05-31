@@ -1,129 +1,81 @@
-# React DateTimePicker Demo and Documentation
+# jQuery DateTimePicker
+[Demo and Documentation](https://xdsoft.net/jqplugins/datetimepicker/)
 
-## Installation
+[![Build Status](https://travis-ci.org/xdan/datetimepicker.svg?branch=master)](https://travis-ci.org/xdan/datetimepicker)
+[![npm version](https://badge.fury.io/js/jquery-datetimepicker.svg)](https://badge.fury.io/js/jquery-datetimepicker)
+[![npm](https://img.shields.io/npm/dm/jquery-datetimepicker.svg)](https://www.npmjs.com/package/jquery-datetimepicker)
 
-To install the component, use npm:
+PLEASE. Help me update the documentation.
+[Doc.tpl](https://github.com/xdan/datetimepicker/blob/master/doc.tpl)
+This file will be automatically displayed on the site
 
-```sh
-npm install react-custom-datepicker
+# Installation
+
+```bash
+npm install jquery-datetimepicker
+```
 OR
+```bash
+yarn add jquery-datetimepicker
+```
+or download [zip](https://github.com/xdan/datetimepicker/releases)
+# datetimepicker
+==============
 
-sh
-Copier le code
-yarn add react-custom-datepicker
-Or download the zip file.
+**!!! In the latest version the 'lang' option is obsolete. The language setting is now global. !!!**
 
-Usage
-Basic Example
-Import the DateTimePicker component and its styles into your React application:
+Use this:
+```javascript
+jQuery.datetimepicker.setLocale('en');
+```
+[Documentation][doc]
 
-jsx
-Copier le code
-import React, { useState } from 'react';
-import DateTimePicker from 'react-custom-datepicker';
-import 'react-custom-datepicker/dist/DateTimePicker.css';
+jQuery Plugin Date and Time Picker
 
-const App = () => {
-  const [selectedDate, setSelectedDate] = useState(null);
+DateTimePicker
 
-  return (
-    <div>
-      <h1>DateTimePicker Demo</h1>
-      <DateTimePicker
-        label="Select Date and Time"
-        selected={selectedDate}
-        onChange={setSelectedDate}
-      />
-      {selectedDate && <p>Selected Date: {selectedDate.toString()}</p>}
-    </div>
-  );
-};
+![ScreenShot](https://raw.github.com/xdan/datetimepicker/master/screen/1.png)
 
-export default App;
-Options
-You can customize the component with the following properties:
-
-label (string): The label for the date picker.
-selected (Date): The selected date.
-onChange (function): The function to call when the date changes.
-id (string): The id for the date picker.
-showTimeSelect (boolean, default: true): Whether to show time selection.
-dateFormat (string, default: "MMMM d, yyyy h
-aa"): The format of the date.
-Examples
 DatePicker
-jsx
-Copier le code
-<DateTimePicker
-  label="Date Picker"
-  selected={selectedDate}
-  onChange={setSelectedDate}
-/>
+
+![ScreenShot](https://raw.github.com/xdan/datetimepicker/master/screen/2.png)
+
 TimePicker
-jsx
-Copier le code
-<DateTimePicker
-  label="Time Picker"
-  selected={selectedDate}
-  onChange={setSelectedDate}
-  showTimeSelect
-  dateFormat="h:mm aa"
-/>
-Options to Highlight Specific Dates or Periods
-You can use the highlightDates prop to highlight specific dates:
 
-jsx
-Copier le code
-<DateTimePicker
-  label="Special Dates"
-  selected={selectedDate}
-  onChange={setSelectedDate}
-  highlightDates={[
-    { "react-datepicker__day--highlighted": [new Date("2023-12-25"), new Date("2024-01-01")] },
-  ]}
-/>
-JS Build Help
-Requirements
-This project requires Node.js and npm. Download and install Node.js.
+![ScreenShot](https://raw.github.com/xdan/datetimepicker/master/screen/3.png)
 
-Installing Dependencies
-Install npm dependencies:
+Options to highlight individual dates or periods
 
-sh
-Copier le code
-npm install
-Building
-To build the production files:
+![ScreenShot](https://raw.github.com/Mingpao/datetimepicker/master/screen/4.png)
 
-sh
-Copier le code
-npm run build
-Generated Files Structure
-When the build is complete, you will have the following files:
+![ScreenShot](https://raw.github.com/Mingpao/datetimepicker/master/screen/5.png)
 
-dist/react-custom-datepicker.js - browser file
-dist/react-custom-datepicker.min.js - minified browser file
-dist/react-custom-datepicker.css - styles file
-Contribution
-Contributions are welcome! Please submit pull requests or open issues on GitHub.
+![ScreenShot](https://raw.github.com/Mingpao/datetimepicker/master/screen/6.png)
 
-License
-This project is licensed under the ISC License.
+[doc]: https://xdsoft.net/jqplugins/datetimepicker/
 
-Conversion Explanation
-The conversion from the jQuery plugin to a React component involved the following steps:
+### JS Build help
 
-Replacing jQuery APIs with React APIs
-Using React hooks (useState, useEffect) to manage state and side effects. Utilizing react-datepicker to provide the date and time picking functionality, replacing the original jQuery plugin.
+**Requires Node and NPM** [Download and install node.js](http://nodejs.org/download/).
 
-Component Structure
-The DateTimePicker component encapsulates the date and time picking logic. Props are used to customize the component's behavior (e.g., showing or hiding the time selection).
+Install:
 
-Styles
-CSS styles were adapted to match the desired appearance of the component. Using CSS classes to style the date and time picker.
+1. Install `bower` globally with `npm install -g bower`.
+2. Run `npm install`. npm will look at `package.json` and automatically install the necessary dependencies. 
+3. Run `bower install`, which installs front-end packages defined in `bower.json`.
 
-Development Environment Configuration
-Using Webpack to bundle the JavaScript and CSS files. Using Babel to transpile JSX and ES6 code to browser-compatible JavaScript.
+Notice: If you use Bower v1.5.2, you will get the error: `The "main" field cannot contain minified files`
+You can regress to version 1.3.12
 
-Documentation
-Using JSDoc to generate detailed documentation of the component's properties and usage. Creating a comprehensive README to guide users on installation, usage, and contribution to the project. This conversion allows the date and time picker to be used effectively in React applications, leveraging React's modern features and syntax.
+1. `npm uninstall bower -g`
+2. `npm install -g bower@1.3.12`
+
+Build:
+
+First install npm requirements: `npm install -g uglifycss concat-cli`
+Then build the files: `npm run build`
+
+When the build completes, you'll have the following files:
+- **build/jquery.datetimepicker.full.js** - browser file
+- **build/jquery.datetimepicker.full.min.js** - browser minified file
+- **build/jquery.datetimepicker.min.js** - amd module style minified file
