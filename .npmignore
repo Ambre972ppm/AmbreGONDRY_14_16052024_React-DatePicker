@@ -1,85 +1,82 @@
-# Node.js
+# Ignorer node_modules
 node_modules/
+
+# Ignorer les fichiers de logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-lerna-debug.log*
 
-# MacOS
+# Ignorer les fichiers MacOS
 .DS_Store
 
-# Logs
-logs
-*.log
-logs/*.log
-
-# Runtime data
+# Ignorer les données de runtime
 pids
 *.pid
 *.seed
 *.pid.lock
 
-# Dependency directories
+# Ignorer les répertoires de dépendances
 jspm_packages/
 
-# Optional npm cache directory
+# Ignorer le cache npm optionnel
 .npm
 
-# Optional eslint cache
+# Ignorer le cache eslint optionnel
 .eslintcache
 
-# Optional REPL history
+# Ignorer l'historique REPL optionnel
 .node_repl_history
 
-# Output of 'npm pack'
+# Ignorer la sortie de 'npm pack'
 *.tgz
 
-# Yarn Integrity file
+# Ignorer le fichier d'intégrité de Yarn
 .yarn-integrity
 
-# dotenv environment variable files
+# Ignorer les fichiers d'environnement dotenv
 .env
 .env.test
 .env.production
 
-# Parcel-bundler cache
+# Ignorer le cache Parcel-bundler
 .cache
 .parcel-cache
 
-# Next.js build output
+# Ignorer la sortie de build Next.js
 .next
 out
 
-# Nuxt.js build / generate output
+# Ignorer la sortie de build Nuxt.js
 .nuxt
 
-# vuepress build output
+# Ignorer la sortie de build vuepress
 .vuepress/dist
 
-# Serverless directories
+# Ignorer les répertoires Serverless
 .serverless
 
-# FuseBox cache
+# Ignorer le cache FuseBox
 .fusebox
 
-# Webpack
+# Ignorer les fichiers Webpack
 .webpack/
 .cache/
 
-# Compiled CSS
+# Ignorer les cartes CSS compilées
 *.css.map
 
-# Compiled JavaScript
+# Ignorer les cartes JavaScript compilées
 *.js.map
 
-# Dist folder (excluding dist)
+# Ignorer les dossiers dist (mais pas les fichiers nécessaires)
 !dist/
 dist/*.map
+dist/*.html
 
-# Static folder
+# Ignorer les dossiers statiques
 public/
 
-# IDEs and editors
+# Ignorer les fichiers et dossiers des IDEs et éditeurs
 .idea
 .vscode
 *.suo
@@ -88,9 +85,9 @@ public/
 *.sln
 *.sw?
 
-# Test coverage
+# Ignorer les répertoires de couverture de tests
 coverage/
 *.lcov
 
-# JSDoc output
+# Ignorer la sortie JSDoc
 docs/

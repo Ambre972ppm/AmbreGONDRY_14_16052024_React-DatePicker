@@ -4,13 +4,13 @@
 To install the component, use npm:
 
 ```sh
-npm install react-custom-datepicker
+npm install @ambre972ppm/react-custom-datepicker
 ```
 
 OR
 
 ```sh
-yarn add react-custom-datepicker
+yarn add @ambre972ppm/react-custom-datepicker
 ```
 
 ## Usage
@@ -19,8 +19,8 @@ Import the DateTimePicker component and its styles into your React application:
 
 ```jsx
 import React, { useState } from 'react';
-import DateTimePicker from 'react-custom-datepicker';
-import 'react-custom-datepicker/dist/DateTimePicker.css';
+import DateTimePicker from '@ambre972ppm/react-custom-datepicker';
+import '@ambre972ppm/react-custom-datepicker/dist/DateTimePicker.css';
 
 const App = () => {
   const [selectedDate, setSelectedDate] = useState(null);
@@ -39,7 +39,6 @@ const App = () => {
 };
 
 export default App;
-
 ```
 
 ### Options 
@@ -107,9 +106,9 @@ npm run build
 ### Generated Files Structure
 When the build is complete, you will have the following files:
 
-* `dist/react-custom-datepicker.js` - browser file
-* `dist/react-custom-datepicker.min.js` - minified browser file
-* `dist/react-custom-datepicker.css` - styles file
+* `dist/bundle.js` - browser file
+* `dist/bundle.min.js` - minified browser file
+* `dist/DateTimePicker.css.css` - styles file
 
 ## Contribution
 Contributions are welcome! Please submit pull requests or open issues on GitHub.
