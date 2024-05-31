@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
 import DateTimePicker from '../src/DateTimePicker/DateTimePicker';
+import '../src/DateTimePicker/DateTimePicker.css';
 
 const App = () => {
   const [selectedDate, setSelectedDate] = useState(null);
 
   return (
     <div>
-      <h1>React Custom DateTimePicker</h1>
+      <h1>DateTimePicker Demo</h1>
       <DateTimePicker
         label="Select Date and Time"
         selected={selectedDate}
-        onChange={date => setSelectedDate(date)}
+        onChange={setSelectedDate}
       />
     </div>
   );
