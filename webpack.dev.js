@@ -2,11 +2,12 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  mode: 'development', 
-  entry: './playground/index.js',
+  mode: 'development',
+  entry: './playground/index.js', // Point d'entrée pour le développement
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
+    publicPath: '/',
   },
   module: {
     rules: [
@@ -41,9 +42,6 @@ module.exports = {
     compress: true,
     port: 8080,
     open: true,
-  },
-  performance: {
-    maxAssetSize: 512000, // Limite à 500 KB
-    maxEntrypointSize: 512000, // Limite à 500 KB
+    historyApiFallback: true,
   },
 };
