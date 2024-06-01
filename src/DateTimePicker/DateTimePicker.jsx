@@ -11,7 +11,14 @@ import './DateTimePicker.css';
  * @param {boolean} [props.showTimeSelect=true] - Whether to show time selection
  * @param {string} [props.dateFormat="yyyy-MM-dd'T'HH:mm"] - The format of the date
  */
-const DateTimePicker = ({ label, selected, onChange, id, showTimeSelect = true, dateFormat = "yyyy-MM-dd'T'HH:mm" }) => {
+const DateTimePicker = ({
+  label,
+  selected,
+  onChange,
+  id,
+  showTimeSelect = true,
+  dateFormat = "yyyy-MM-dd'T'HH:mm"
+}) => {
   const [date, setDate] = useState(selected);
 
   useEffect(() => {
@@ -28,9 +35,9 @@ const DateTimePicker = ({ label, selected, onChange, id, showTimeSelect = true, 
     <div className="datetime-picker">
       <label htmlFor={id}>{label}</label>
       <input
-        type="datetime-local"
+        type={showTimeSelect ? "datetime-local" : "date"}
         id={id}
-        value={date ? date.toISOString().slice(0, 16) : ''}
+        value={date ? (showTimeSelect ? date.toISOString().slice(0, 16) : date.toISOString().slice(0, 10)) : ''}
         onChange={handleChange}
         className="form-control"
       />
