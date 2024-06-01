@@ -1,6 +1,6 @@
 {
   "name": "@ambre972ppm/react-custom-datepicker",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A React component for date and time picking",
   "main": "dist/bundle.js",
   "scripts": {
